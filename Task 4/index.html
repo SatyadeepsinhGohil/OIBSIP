@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Login System</title>
+    <link rel="stylesheet" href="style.css">  </head>
+<body>
+    <div class="container">
+        <div class="form-box" id="login-form">
+            <h2>Login</h2>
+            <div class="error" id="login-error"></div>
+            <input type="text" id="login-username" placeholder="Username"><br><br>
+            <input type="password" id="login-password" placeholder="Password"><br><br>
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showRegisterForm()">Register</a></p>
+        </div>
+
+        <div class="form-box" id="register-form" style="display:none;">
+            <h2>Register</h2>
+            <div class="error" id="register-error"></div>
+            <input type="text" id="register-username" placeholder="Username"><br><br>
+            <input type="password" id="register-password" placeholder="Password"><br><br>
+            <button onclick="register()">Register</button>
+            <p>Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+        </div>
+
+        <div class="content-box" id="secured-page">
+            <h2>Secured Page</h2>
+            <p>Welcome, <span id="welcome-username"></span>!</p>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
